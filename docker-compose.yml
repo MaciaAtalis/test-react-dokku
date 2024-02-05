@@ -1,7 +1,10 @@
 version: '3'
 services:
   app:
-    platform: linux/x86_64
-    command: PORT=8080 npm start
+    build: 
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "80:8080"
+      - "3000:8080"
+    command: sh -c "PORT=8080 npm start"
+    container_name: test_react_dokku

@@ -14,4 +14,4 @@ RUN npm install
 COPY . /app
 
 # run your app
-CMD ["PORT=8080", "npm", "start"]
+CMD ["npm", "start"]
