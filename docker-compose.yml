@@ -5,6 +5,6 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:8080"
+      - "4000:8080"
     command: sh -c "PORT=8080 npm start"
     container_name: test_react_dokku
