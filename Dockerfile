@@ -5,8 +5,6 @@ FROM node:alpine
 WORKDIR /app
 
 # copy package.json to work directory, so that we install npm dependencies
-#COPY package.json /app
-
 COPY . /app
 
 # install npm dependencies
@@ -15,9 +13,11 @@ RUN npm install
 # copy your project files to work directory
 RUN npm run build
 
+# install necesary serve
 RUN npm install -g serve
 
+# expose the port that will use
 EXPOSE 4000
 
 # run build app
-CMD ["serve", "-s", "build", "-l", "4000"]
+CMD ["npm", "run", "run-build"]
