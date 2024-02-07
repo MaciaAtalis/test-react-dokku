@@ -11,7 +11,7 @@ COPY package.json /app
 RUN npm install
 
 # copy your project files to work directory
-COPY . /app
+COPY . /build
 
 # run your app
-CMD ["PORT=8000","npm", "start"]
+#CMD ["npm", "start"]
