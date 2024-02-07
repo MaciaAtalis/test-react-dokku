@@ -17,5 +17,7 @@ RUN npm run build
 
 RUN npm install -g serve
 
+EXPOSE 4000
+
 # run build app
 CMD ["serve", "-s", "build", "-l", "4000"]
